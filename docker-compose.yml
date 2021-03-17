@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+    projeto:
+        image: php:7.4-apache
+        restart: always
+        build: .
+        container_name: web_servidor
+        volumes:
+            - ./:/var/www/html
+        ports: 
+            - 8085:80
+
